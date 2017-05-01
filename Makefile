@@ -97,23 +97,23 @@ deps:
 	chmod +x build/closurebuilder.py
 
 	mkdir -p $(APP_ENGINE_THIRD_PARTY)
-	svn checkout https://github.com/google/closure-library/trunk/closure/goog
+	#svn checkout https://github.com/google/closure-library/trunk/closure/goog
 	svn checkout https://github.com/google/closure-library/trunk/third_party/closure/goog
 	svn checkout https://github.com/ajaxorg/ace-builds/trunk/src-min-noconflict
 	svn checkout https://github.com/google/blockly/trunk
 	svn checkout https://github.com/CreateJS/SoundJS/trunk/lib
-	svn checkout https://github.com/gleitz/midi-js-soundfonts/trunk/gh-pages/FluidR3_GM/acoustic_guitar_nylon-mp3
-	svn checkout https://github.com/gleitz/midi-js-soundfonts/trunk/gh-pages/FluidR3_GM/acoustic_grand_piano-mp3
-	svn checkout https://github.com/gleitz/midi-js-soundfonts/trunk/gh-pages/FluidR3_GM/banjo-mp3
-	svn checkout https://github.com/gleitz/midi-js-soundfonts/trunk/gh-pages/FluidR3_GM/choir_aahs-mp3
-	svn checkout https://github.com/gleitz/midi-js-soundfonts/trunk/gh-pages/FluidR3_GM/flute-mp3
-	svn checkout https://github.com/gleitz/midi-js-soundfonts/trunk/gh-pages/FluidR3_GM/melodic_tom-mp3
-	svn checkout https://github.com/gleitz/midi-js-soundfonts/trunk/gh-pages/FluidR3_GM/trumpet-mp3
-	svn checkout https://github.com/gleitz/midi-js-soundfonts/trunk/gh-pages/FluidR3_GM/violin-mp3
+	svn checkout https://github.com/gleitz/midi-js-soundfonts/trunk/FluidR3_GM/acoustic_guitar_nylon-mp3
+	svn checkout https://github.com/gleitz/midi-js-soundfonts/trunk/FluidR3_GM/acoustic_grand_piano-mp3
+	svn checkout https://github.com/gleitz/midi-js-soundfonts/trunk/FluidR3_GM/banjo-mp3
+	svn checkout https://github.com/gleitz/midi-js-soundfonts/trunk/FluidR3_GM/choir_aahs-mp3
+	svn checkout https://github.com/gleitz/midi-js-soundfonts/trunk/FluidR3_GM/flute-mp3
+	svn checkout https://github.com/gleitz/midi-js-soundfonts/trunk/FluidR3_GM/melodic_tom-mp3
+	svn checkout https://github.com/gleitz/midi-js-soundfonts/trunk/FluidR3_GM/trumpet-mp3
+	svn checkout https://github.com/gleitz/midi-js-soundfonts/trunk/FluidR3_GM/violin-mp3
 
 	@# messages.js confuses the compiler by also providing "Blockly.Msg.en".
-	rm $(APP_ENGINE_THIRD_PARTY)/blockly/msg/messages.js
-	svn checkout https://github.com/NeilFraser/JS-Interpreter
+	#rm $(APP_ENGINE_THIRD_PARTY)/blockly/msg/messages.js
+	svn checkout https://github.com/NeilFraser/JS-Interpreter/trunk
 	java -jar third-party/closure-compiler.jar\
 	 --js appengine/third-party/JS-Interpreter/acorn.js\
 	 --js appengine/third-party/JS-Interpreter/interpreter.js\
